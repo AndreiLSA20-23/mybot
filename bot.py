@@ -1,8 +1,13 @@
 import settings
 import logging
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
+#logging.basicConfig(filename='bot.log', level=logging.INFO)
+logging.basicConfig(filename='bot.log', 
+                    format='[%(asctime)s] [%(levelname)s] => %(message)s', 
+                    datefmt='%Y-%m-%d %H:%M:%S',
+                    level=logging.INFO)
 
-logging.basicConfig(filename='bot.log', level=logging.INFO)
+
 
 def greet_user(update, context):
     print('Вызван /start')
